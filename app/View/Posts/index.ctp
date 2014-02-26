@@ -24,13 +24,15 @@
         <td>
         
        
-        
+        <td>
         <?php
                 echo $this->Html->link(
                     'Edit',
                     array('action' => 'edit', $post['Post']['id'])
                 );
             ?>
+            </td>
+            <td>
             
              <?php
                 echo $this->Form->postLink(
@@ -39,6 +41,7 @@
                     array('confirm' => 'Are you sure?')
                 );
             ?>
+            </td>
             
         </td>
     </tr>

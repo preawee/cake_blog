@@ -2,6 +2,8 @@
 // app/Controller/UsersController.php
 
 class UsersController extends AppController {
+ 	
+
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -10,9 +12,10 @@ class UsersController extends AppController {
         //allow people access to add,index,edit 
         //allow execute of code that there are functions here. 
         $this->Auth->allow('add','edit','delete','logout');
+        $this->set('authUser', $this->user);
     }
     
-  
+
 
 public function login() {
     if ($this->request->is('post')) {

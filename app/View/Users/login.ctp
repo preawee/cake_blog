@@ -19,28 +19,6 @@
 <?php echo $this->Form->end(__('Login')); ?>
 </div>
 
-<div class="actions">
-
-
-
-
-	
-	<h1><?php if(isset($username)) { ?>
-			<h1><?php echo $this->Html->link('Log out', array('plugin'=>null,
-			'admin'=>false, 'controller'=>'users', 'action'=>'logout'));
-			}
-			
-
-  			 else   {  echo $this->Html->link('Log in', array('plugin'=>null,
-			'admin'=>false, 'controller'=>'users', 'action'=>'login'));	}
-			
-			 ?>
-			</h1> 
-	</h1>
-
-
-
-</div>
 
 
 

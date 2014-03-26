@@ -77,8 +77,13 @@ class AppController extends Controller {
         return true;
     }
 
-    // Default deny
+    if (isset($user['role']) && $user['role'] === 'author') {
     return false;
+    }
+    
+  
+
+
 }
 
 	

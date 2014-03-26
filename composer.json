@@ -18,6 +18,7 @@
         "source": "https://github.com/cakephp/cakephp"
     },
     "require": {
+	"slywalker/boost_cake": “*”,
         "php": ">=5.2.8",
         "ext-mcrypt": "*"
     },

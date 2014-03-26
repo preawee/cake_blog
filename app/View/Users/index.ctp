@@ -1,8 +1,14 @@
 <!-- File: /app/View/Users/index.ctp -->
+
+
 <div class="users index">
 
-<h1>Blog users</h1>
-<table>
+
+<div class="panel panel-default">
+<div class="panel-heading"> Blog users</div>
+
+<div class="table-responsive">
+  <table class="table">
     <tr>
         <th>UserId</th>
         <th>UserName</th>
@@ -54,7 +60,8 @@
     <?php unset($user); ?>
 </table>
 
-
+</div>
+</div>
 
 </div>
 
@@ -64,27 +71,16 @@
 <div id = "addpost">
 <?php echo $this->Html->link(
     'Add User',
-    array('controller' => 'users', 'action' => 'add')
-); ?>
+    array('controller' => 'users', 'action' => 'add')); ?>
 </div>
 
 
-	<div id = "buttonlogout">
-	<h1><?php if(isset($username)) { ?>
-	<h1><?php echo $this->Html->link('Log out', array('plugin'=>null,
-			'admin'=>false, 'controller'=>'users', 'action'=>'logout'));
-		}
-			
 
-  			 else   {  echo $this->Html->link('Log in', array('plugin'=>null,
-			'admin'=>false, 'controller'=>'users', 'action'=>'login'));	}
-			
-			 ?>
-			</h1> </h1>
-	</div>
 
 
 
 </div>
+
+
 
 

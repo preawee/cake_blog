@@ -1,6 +1,3 @@
-<!-- File: /app/View/Posts/add.ctp -->
-// this form helper create the form tag for us. 
-//
 <h1>Add Post</h1>
 <?php
 echo $this->Form->create('Post');

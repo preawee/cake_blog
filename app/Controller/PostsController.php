@@ -5,6 +5,8 @@ class PostsController extends AppController {
   	public $components = array('Session');
   	
     public function index() {
+    
+   
     //finding all records in the post table and hading the response index.ctp in view 
         $this->set('posts', $this->Post->find('all'));
     }
@@ -99,7 +101,7 @@ class PostsController extends AppController {
 
 
 
-public function isAuthorized($user) {
+public function isAuthorized($user) {  //it allow login add loggin and owns in posts 
     // All registered users can add posts
     if ($this->action === 'add') {
         return true;
@@ -108,7 +110,7 @@ public function isAuthorized($user) {
     // The owner of a post can edit and delete it
     if (in_array($this->action, array('edit', 'delete'))) {
         $postId = $this->request->params['pass'][0];
-        if ($this->Post->isOwnedBy($postId, $user['id'])) {
+        if ($this->Post->isOwnedBy($postId, $user['id'])) {  //loggin and own edit/delete/view 
             return true;
         }
     }

@@ -32,6 +32,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->css('cake.generic');  
 		
 		echo $this->Html->css('bootstrap'); 
+                
+               
+                echo $this->Html->script('jquery-1.7.2.min');    
+                echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -53,13 +57,22 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
            
                	echo $this->Html->link('User', array('controller' => 'users', 'action' => 'login'));
             
-        } else { echo $this->Html->link('User', array('controller' => 'users', 'action' => 'index'));}?> </li>
+                } else { echo $this->Html->link('User', array('controller' => 'users', 'action' => 'index'));}?> </li>
 			
 		<li><?php if(!isset($username)) { //  if users not login, it will bring tologin page when users click on button of POST
            
                	echo $this->Html->link('Post', array('controller' => 'users', 'action' => 'login'));
             
-        } else { echo $this->Html->link('Post', array('controller' => 'posts', 'action' => 'index'));}?> </li>
+                 } else { echo $this->Html->link('Post', array('controller' => 'posts', 'action' => 'index'));}?> </li>
+                
+                <li><?php if(!isset($username)) { //  if users not login, it will bring tologin page when users click on button of POST
+           
+               	echo $this->Html->link('Photo', array('controller' => 'users', 'action' => 'login'));
+            
+                 } else { echo $this->Html->link('Photo', array('controller' => 'photos', 'action' => 'index'));}?> </li>
+                
+                
+                
 			
 
 		
@@ -84,11 +97,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	
 		<div id="content">
 	
-	
-		<div  id="welcome">
+                  
+		
+                    <div  id="welcome">
 <!-- gets username function from user login -->
 				
-		
+
     	<h1>Hello <?php echo $username; ?>! Welcome back. </h1> 
 		</div>
 
@@ -97,8 +111,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 			<?php echo $this->fetch('content'); ?>
 			
-		
+                 
 		</div>
+            
+           
+            
 		<div id="footer">
                     <div id ="name">
                     Nareerat Pitakpoolsin @ 2014 

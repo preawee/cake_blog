@@ -1,17 +1,17 @@
-<?Php
+<?php
 
-class PhotosController extends AppController {
+
+class HomesController extends AppController {
     public $helpers = array('Html','Js', 'Fancybox.Fancybox'); 
        
   	
      public function index() {
  
-
     
+   
     
 }
 
 }
-    
-    
+ 
 ?>

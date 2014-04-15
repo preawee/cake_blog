@@ -1,6 +1,7 @@
+<div class="photos index">
 
-<div id="gallery">
-	<h2>Image  Gallery</h2> 
+
+	
 	
 <?php
 
@@ -27,5 +28,12 @@
 
    
 ?>
-</div>
+    
+    </div>
+   <div class="actions">
+    
+<h1>Image  Gallery</h1> 
+
+   </div>
+
 

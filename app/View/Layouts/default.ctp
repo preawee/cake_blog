@@ -33,10 +33,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		
 		echo $this->Html->css('bootstrap'); 
                 
-               
                 echo $this->Html->script('jquery-1.7.2.min');    
                 echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
 
+                echo $this->Html->css('jquery-ui-1.8.22.custom');
+                echo $this->Html->script('jquery-1.8.2.min'); 
+                echo $this->Html->script('jquery-ui-1.8.22.custom.min'); 
+                 echo $this->Html->script(' jquery-ui-1.10.4.custom'); 
+               
+                        
+                        
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -51,7 +57,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<ul class = "nav nav-pills">
 	 
 	 
-	 	<li><?php echo $this->Html->link('Home', array('controller' => 'users', 'action' => 'login'));?> </li>
+	 	<li><?php echo $this->Html->link('Home', array('controller' => 'homes', 'action' => 'index'));?> </li>
 			
 		<li><?php if(!isset($username)) { //  if users not login, it will bring to login page when users click on button of USER
            
@@ -85,13 +91,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			'admin'=>false, 'controller'=>'users', 'action'=>'login'));	} ?>
 		</li>
 		
-	
+	  <div id ="welcome">Welcome back <?php echo $username; ?></div>
 		</ul>
 		
 		
-		<!--<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>-->
+		
 			
-	
+                  
 			
 	</div>
 	
@@ -99,13 +105,19 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	
                   
 		
-                    <div  id="welcome">
-<!-- gets username function from user login -->
+           
 				
+		<div id ="logo">  
+ 
+    <?php echo $this->Html->image('Logo.png');?></div></div>
+ 
 
-    	<h1>Hello <?php echo $username; ?>! Welcome back. </h1> 
-		</div>
+     
+  </div> 
 
+
+
+		
 		
 			<?php echo $this->Session->flash(); ?>
 

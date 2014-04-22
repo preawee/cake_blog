@@ -1,7 +1,5 @@
 <div class="photos index">
 
-
-	
 	
 <?php
 
